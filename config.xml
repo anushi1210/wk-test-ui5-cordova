@@ -30,5 +30,7 @@
         <config-file parent="CFBundleDisplayName" platform="ios" target="*-Info.plist">
             <string>WkTestApp</string>
         </config-file>
+        <preference name="scheme" value="app" />
+        <preference name="hostname" value="localhost" />
     </platform>
 </widget>
