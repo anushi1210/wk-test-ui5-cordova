@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>My-WK-App</title>
+	<script type="text/javascript" src="cordova.js"></script>
+
+    <script id="sap-ui-bootstrap"
+            src="sapui5_libs/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m, sap.ui.core"
+            data-sap-ui-theme="sap_belize"
+            data-sap-ui-resourceroots='{"ui5app": "./"}'
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-async="true"
+            data-sap-ui-oninit="module:sap/ui/core/ComponentSupport">
+    </script>
+
+</head>
+
+<body class="sapUiBody">
+    <div class="app">
+        <h1>Appname</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+    </div>
+<div data-sap-ui-component data-name="ui5app" data-id="container" data-settings='{"id" : "MyWKApp"}'></div>
+
+<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+{
+	"sap.app":
+	{
+		"id": "ui5app",
+		"type": "application",
+		"applicationVersion": {
+            "version": "1.0.15"
+        },
+		"isMock": true,
+        "debug": true,
+		"i18n": "i18n/text.properties",
+		"dataSources":
+		{
+			"SERVER":
+			{
+				"url": "http://srv"
+			},
+			"LOGOFF":
+			{
+				"url": "http://srv"
+			}
+		}
+	},
+
+	"sap.ui5":
+	{
+		"resources":
+		{
+			"css":
+			[
+				{
+					"uri": "css/custom.css"
+				}
+			],
+
+			"js":
+			[
+				{
+					"uri": "libs/lodash.js"
+				}
+			]
+		},
+
+		"dependencies":
+		{
+			"minUI5Version": "1.42",
+			"libs":
+			{
+				"sap.m":
+				{
+					"minVersion": "1.42"
+				},
+
+				"sap.ui.layout":
+				{
+					"minVersion": "1.42"
+				},
+				"sap.ui.core": {},
+				"sap.ui.table": {}
+			}
+		},
+		"rootView": {
+			"viewName": "ui5app.view.App",
+			"type": "XML",
+			"async": true
+		},
+		"routing":
+		{
+			"config":
+			{
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "ui5app.view",
+				"controlId": "app",
+				"async": true
+			},
+
+			"routes":
+			[
+                {
+					"pattern": "",
+					"name": "login",
+					"target": "login"
+				}
+			],
+
+			"targets":
+			{
+                "login":
+				{
+					"viewName": "Login",
+					"viewId": "loginViewId",
+					"controlId": "app",
+					"controlAggregation": "pages"
+				}
+			}
+		},
+
+		"models":
+		{
+			"i18n":
+			{
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ui5app.i18n.text"
+				}
+			}
+		}
+	}
+}

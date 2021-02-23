@@ -1,0 +1,35 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" controllerName="ui5app.controller.Login">
+    <Page enableScrolling="false" showHeader="false" id="loginPageId" class="loginPageBackground">
+        <content>
+
+            <FlexBox height="100%" alignItems="Center" justifyContent="Start"
+                     direction="Column" class="sapUimediumMargin">
+                <items>
+                    <f:SimpleForm editable="true" layout="ResponsiveGridLayout"
+                                  maxContainerCols="1"
+                                  columnsXL="1"
+                                  columnsL="1"
+                                  columnsM="1"
+                                  labelSpanXL="12"
+                                  labelSpanL="12"
+                                  labelSpanM="12"
+                                  labelSpanS="12"
+                                  adjustLabelSpan="false"
+                                  class="formClass minFixedWidthLogin sapUiSmallMarginTop">
+                        <f:content>
+                            <Label text="Username" design="Bold" />
+                            <Input placeholder="{i18n>usernamePlaceholder}" value="" class="inputUsernameLogin">
+                            </Input>
+                            <Label text="Password" design="Bold" class="sapUiTinyMarginTop"/>
+                            <Input placeholder="{i18n>passwordPlaceholder}" type="Password"
+                                   value="" id="passwordInput" class="inputPasswordLogin">
+                            </Input>
+                        </f:content>
+                    </f:SimpleForm>
+
+                </items>
+            </FlexBox>
+
+        </content>
+    </Page>
+</mvc:View>
